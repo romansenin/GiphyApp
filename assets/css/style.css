@@ -1,16 +1,32 @@
+body {
+  min-height: 100vh;
+  background: linear-gradient(rgb(227, 234, 238), rgb(163, 163, 163));
+}
+
 .button {
-  margin-right: 15px;
+  margin: 5px;
+  font-size: 14px;
 }
 
 .buttons {
+  float: left;
   margin: 20px 0;
+}
+
+.message {
+  clear: both;
 }
 
 .button:last-child {
   margin: 0;
 }
 
-.container {
+.centered-buttons {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.centered-gifs {
   width: 85%;
   margin: 0 auto;
 }
@@ -33,12 +49,42 @@
 }
 
 .gifdiv {
+  background-color: white;
   margin: 10px;
   float: left;
   border: 1px solid #eee;
 }
 
+.gifdump {
+  clear: both;
+}
+
 .rating {
   margin: 10px 0;
   text-align: center;
+}
+
+label {
+  display: block;
+}
+
+form {
+  margin: 20px 50px;
+}
+
+input {
+  position: relative;
+  top: 2px;
+  font-size: 15px;
+}
+
+#submit {
+  padding: 5px 15px;
+  margin-top: 10px;
+}
+
+.container {
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
 }

@@ -6,17 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>GihpyApp</title>
 
+    <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
     <div class="container">
-      <div class="buttons"></div>
-      <div class="message">
-        <h4>Press any button to generate gifs.</h4>
+      <div class="centered-buttons">
+        <div class="buttons"></div>
+        <div class="message">
+          <h4>Press any button to generate gifs.</h4>
+        </div>        
       </div>
-      <!-- <div class="addfood"></div> -->
-      <div class="gifdump"></div>
+      <form onsubmit="addTopic()">
+        <label for="topic-input">Add a new item</label>
+        <input type="text" id="topic-input" />
+        <button id="submit" class="button" type="submit">Submit</button>
+      </form>
     </div>
+    <div class="gifdump centered-gifs"></div>
+
     <script
       src="https://code.jquery.com/jquery-3.4.0.min.js"
       integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="

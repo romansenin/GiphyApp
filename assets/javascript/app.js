@@ -10,14 +10,18 @@ let topics = [
   "bananas"
 ];
 
-$.each(topics, function(_, food) {
-  $(".buttons").append(
-    $("<button>")
-      .text(food)
-      .addClass("button")
-      .attr("value", food)
-  );
-});
+function generateButtons() {
+  $.each(topics, function(_, topic) {
+    $(".buttons").append(
+      $("<button>")
+        .text(topic)
+        .addClass("button")
+        .attr("value", topic)
+    );
+  });
+}
+
+generateButtons();
 
 $(document).on("click", ".button", requestAPI);
 
@@ -45,7 +49,9 @@ function requestAPI() {
         .attr("data-animate", response.data[i].images.original.url)
         .addClass("gif");
       newGifDiv.append(newGif);
-      newGifDiv.append("<h5 class='rating'> Rating: " + response.data[i].rating + "</h5>")
+      newGifDiv.append(
+        "<h5 class='rating'> Rating: " + response.data[i].rating + "</h5>"
+      );
       $(".gifdump").append(newGifDiv);
     }
   });
@@ -61,4 +67,15 @@ function pausePlay() {
     $(this).attr("src", $(this).attr("data-still"));
     $(this).attr("data-state", "still");
   }
+}
+
+function addTopic() {
+  event.preventDefault();
+
+  let newTopic = $("#topic-input").val();
+  topics.push(newTopic);
+
+  $(".buttons").empty();
+
+  generateButtons();
 }
