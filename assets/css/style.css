@@ -16,7 +16,29 @@
 }
 
 .gif {
+  /* margin: 20px 10px 0; */
+  height: 250px;
+  width: auto;
+}
+
+.gif, button {
+  cursor: pointer;
+}
+
+.button {
+  border: 1px solid rgb(134, 194, 214);
+  background-color: lightblue;
+  color: #fff;
+  padding: 10px 15px;
+}
+
+.gifdiv {
   margin: 10px;
-  width: 250px;
-  height: auto;
+  float: left;
+  border: 1px solid #eee;
+}
+
+.rating {
+  margin: 10px 0;
+  text-align: center;
 }
