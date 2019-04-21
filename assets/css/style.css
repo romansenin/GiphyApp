@@ -1,0 +1,22 @@
+.button {
+  margin-right: 15px;
+}
+
+.buttons {
+  margin: 20px 0;
+}
+
+.button:last-child {
+  margin: 0;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.gif {
+  margin: 10px;
+  width: 250px;
+  height: auto;
+}
