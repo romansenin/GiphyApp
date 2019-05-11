@@ -7,4 +7,4 @@ This app allows users to click on any of the preset buttons and then generates g
 * CSS3
 * Javascript/jQuery
 
-The app is located [here](https://rasenin.github.io/GiphyApp).
+The app is located [here](https://romansenin.github.io/GiphyApp).
