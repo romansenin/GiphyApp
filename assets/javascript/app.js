@@ -1,22 +1,9 @@
-let topics = [
-  "tacos",
-  "hamburgers",
-  "french fries",
-  "pizza",
-  "hot dogs",
-  "quesadilla",
-  "kfc",
-  "apples",
-  "bananas"
-];
+let topics = ["rickroll", "mind=blown"];
 
 function generateButtons() {
-  $.each(topics, function(_, topic) {
+  $.each(topics, function (_, topic) {
     $(".buttons").append(
-      $("<button>")
-        .text(topic)
-        .addClass("button")
-        .attr("value", topic)
+      $("<button>").text(topic).addClass("button").attr("value", topic)
     );
   });
 }
@@ -36,8 +23,8 @@ function requestAPI() {
 
   $.ajax({
     url: queryURL,
-    method: "GET"
-  }).then(function(response) {
+    method: "GET",
+  }).then(function (response) {
     console.log(response);
     for (let i = 0; i < response.data.length; i++) {
       let newGifDiv = $("<div>").addClass("gifdiv");
